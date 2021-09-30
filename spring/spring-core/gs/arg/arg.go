@@ -23,8 +23,8 @@ import (
 	"reflect"
 	"runtime"
 
-	"github.com/go-spring/spring-boost/log"
-	"github.com/go-spring/spring-boost/util"
+	"github.com/go-spring/spring-base/log"
+	"github.com/go-spring/spring-base/util"
 	"github.com/go-spring/spring-core/gs/cond"
 	"github.com/go-spring/spring-core/gs/internal"
 )
@@ -325,6 +325,9 @@ type Callable struct {
 	fn       interface{}
 	argList  *argList
 	fileLine string
+}
+
+type bindArg struct {
 }
 
 // Bind 绑定函数及其参数，skip 是相对于当前方法需要跳过的调用栈层数。
